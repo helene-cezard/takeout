@@ -1,0 +1,56 @@
+.basket {
+  background-color: #CE2B37;
+  color: white;
+  padding: 2.5rem;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	width: fit-content;
+  position: relative;
+  z-index: 2;
+  height: 100vh;
+}
+
+.basket__title {
+  padding: 2rem;
+  font-size: 2rem;
+  text-align: center;
+}
+
+.basket__closeButton {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 1rem;
+  font-size: 2rem;
+  font-weight: bold;
+  background-color: #CE2B37;
+  color: white;
+  border: none;
+}
+
+.basket__items, .basket__total {
+  display: flex;
+  justify-content: space-between;
+  width: 15rem;
+  padding: .2rem 0;
+}
+
+.basket__total {
+  font-weight: bold;
+  padding: 2rem 0;
+}
+
+.basket__orderButton {
+  background-color: white;
+  border: none;
+  border-radius: 4px;
+  padding: 1rem;
+  font-size: 1.3rem;
+  margin-top: 4rem;
+  box-shadow: inset -.1rem -.2rem .5rem grey;
+}
+
+.basket__orderButton:active {
+  box-shadow: inset .2rem .1rem 1.3rem grey;
+}

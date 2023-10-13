@@ -1,0 +1,37 @@
+.description {
+  padding: 3rem;
+  border-left: solid black;
+  position: absolute;
+  right: 0;
+  background-color: white;
+  z-index: 2;
+  height: 100vh;
+}
+
+.description__closeButton {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 1rem;
+  font-size: 2rem;
+  font-weight: bold;
+  background-color: #CE2B37;
+  color: white;
+  border: none;
+}
+
+.description__title {
+  margin-bottom: 2rem;
+  font-size: 2rem;
+  text-align: center;
+}
+
+.description__illustration, .description__text {
+  width: 30rem;
+  margin-bottom: 2rem;
+  text-align: justify;
+}
+
+.description__text {
+
+}
