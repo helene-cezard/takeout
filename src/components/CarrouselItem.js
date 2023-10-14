@@ -1,11 +1,13 @@
 import '../styles/CarrouselItem.css'
 
-function CarrouselItem() {
+function CarrouselItem({ id, name, picture, price }) {
   return (
-    <div className='carrousel__item'>
-      <img className='carrousel__itemImg' src='https://cdn.pixabay.com/photo/2017/07/22/22/57/pizza-2530169_1280.jpg' alt='' />
-      <p className='carrousel__itemName'>Pizza margerita</p>
-    </div>
+    <li key={id} className='carrousel__item'>
+      <img className='carrousel__itemImg' src={picture} alt='' />
+      <p className='carrousel__itemName'>{name}</p>
+      <button>Ajouter au panier</button>
+      <p>{price}€</p>
+    </li>
   );
 }
 

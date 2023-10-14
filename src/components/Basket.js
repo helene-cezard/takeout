@@ -2,7 +2,7 @@ import '../styles/Basket.css'
 
 function Basket() {
   return (
-    <div className='basket'>
+    <div className='basket hidden'>
       <button className='basket__closeButton'>X</button>
       <h2 className='basket__title'>Panier</h2>
       <ul>

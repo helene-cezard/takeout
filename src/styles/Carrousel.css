@@ -1,7 +1,9 @@
 .carrousel {
-  width: 100%;
+  width: 120%;
   margin-top: 10rem;
-  display: flex;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
   position: absolute;
+  left: -25%; /* -55% -25% 5% 35%*/
   z-index: 1;
 }

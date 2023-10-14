@@ -1,14 +1,20 @@
-import '../styles/Carrousel.css'
+import '../styles/Carrousel.css';
+import '../styles/CarrouselItem.css';
 import CarrouselItem from './CarrouselItem';
+import { pizze } from '../datas/pizze';
 
 function Carrousel() {
   return (
-    <div className="carrousel">
-      <CarrouselItem />
-      <CarrouselItem />
-      <CarrouselItem />
-      <CarrouselItem />
-    </div>
+    <ul className="carrousel">
+      {pizze.map(({ id, name, picture, price }) => 
+        <CarrouselItem
+        id={id}
+        name={name}
+        picture={picture}
+        price={price}
+        />
+        )}
+    </ul>
   );
 }
 
