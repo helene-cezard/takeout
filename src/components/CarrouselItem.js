@@ -1,11 +1,27 @@
 import '../styles/CarrouselItem.css'
 
-function CarrouselItem({ id, name, picture, price, setDescriptionOpen }) {
+function CarrouselItem({ name, picture, price, setDescriptionOpen, basket, updateBasket }) {
+
+  function addToBasket(name, price) {
+		const currentPizzaSaved = basket.find((pizza) => pizza.name === name)
+		if (currentPizzaSaved) {
+			const basketFilteredCurrentPizza = basket.filter(
+				(pizza) => pizza.name !== name
+			)
+			updateBasket([
+				...basketFilteredCurrentPizza,
+				{ name, price, amount: currentPizzaSaved.amount + 1 }
+			])
+		} else {
+			updateBasket([...basket, { name, price, amount: 1 }])
+		}
+	}
+
   return (
-    <li key={id} className='carrousel__item' onClick={() => setDescriptionOpen(true)}>
+    <li className='carrousel__item' onClick={() => setDescriptionOpen(true)}>
       <img className='carrousel__itemImg' src={picture} alt='' />
       <p className='carrousel__itemName'>{name}</p>
-      <button>Ajouter au panier</button>
+      <button onClick={() => addToBasket(name, price)}>Ajouter au panier</button>
       <p>{price}€</p>
     </li>
   );

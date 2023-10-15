@@ -8,12 +8,13 @@
 	width: fit-content;
   position: relative;
   z-index: 2;
-  height: 100vh;
+  height: 100%;
 }
 
 .basket__openButton {
   margin: 1rem;
   padding: .5rem;
+  height: fit-content;
 }
 
 .basket__closeButton {

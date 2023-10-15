@@ -7,13 +7,14 @@ import { useState } from 'react';
 
 function App() {
   const [descriptionOpen, setDescriptionOpen] = useState(true)
+  const [basket, updateBasket] = useState([]);
+
   return (
     <div className="App">
       <Banner/>
-      <button className='app__basketButton hidden'>Afficher le panier</button>
       <div className='inner-layout'>
-        <Basket />
-        <Carrousel setDescriptionOpen={setDescriptionOpen} />
+        <Basket basket={basket} updateBasket={updateBasket} />
+        <Carrousel setDescriptionOpen={setDescriptionOpen} basket={basket} updateBasket={updateBasket} />
         <Description descriptionOpen={descriptionOpen} setDescriptionOpen={setDescriptionOpen}  />
       </div>
     </div>

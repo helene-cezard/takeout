@@ -1,22 +1,27 @@
 import { useState } from 'react';
 import '../styles/Basket.css'
 
-function Basket() {
+function Basket({basket, updateBasket}) {
 const [isOpen, setIsOpen] = useState(true);
 
   return isOpen ? (
     <div className='basket'>
       <button className='basket__closeButton' onClick={() => setIsOpen(false)}>X</button>
       <h2 className='basket__title'>Panier</h2>
-      <ul>
-        <li className='basket__items'>Pizza margerita : <span className='basket__prices'>13€</span></li>
-        <li className='basket__items'>Pizza napoletana : <span className='basket__prices'>15€</span></li>
-        <li className='basket__items'>Pizza végétarienne : <span className='basket__prices'>10€</span></li>
+      {basket.length > 0 ? (
+        <ul>
+        {basket.map(({name, price, amount}, index) => (
+          <li key={`${name}-${index}`} className='basket__items'>{name} : <span className='basket__prices'>{price}€ x {amount}</span></li>
+        ))}
         <li className='basket__total'>Total : <span className='basket__prices'>38€</span></li>
       </ul>
+      ) : (
+        <p>Votre panier est vide</p>
+      )}
       <button className='basket__orderButton'>Commander</button>
     </div>
-  ) : (
+  )
+   : (
     <button className='basket__openButton'  onClick={() => setIsOpen(true)}>Afficher le panier</button>
   )
 

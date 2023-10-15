@@ -3,17 +3,21 @@ import '../styles/CarrouselItem.css';
 import CarrouselItem from './CarrouselItem';
 import { pizze } from '../datas/pizze';
 
-function Carrousel({setDescriptionOpen}) {
+function Carrousel({setDescriptionOpen, basket, updateBasket}) {
+
   return (
     <ul className="carrousel">
       {pizze.map(({ id, name, picture, price }) => 
-        <CarrouselItem
-        id={id}
-        name={name}
-        picture={picture}
-        price={price}
-        setDescriptionOpen={setDescriptionOpen}
-        />
+        <div key={id}>
+          <CarrouselItem
+          name={name}
+          picture={picture}
+          price={price}
+          setDescriptionOpen={setDescriptionOpen}
+          basket={basket}
+          updateBasket={updateBasket}
+          />
+        </div>
         )}
     </ul>
   );
