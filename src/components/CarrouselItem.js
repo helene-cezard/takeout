@@ -1,8 +1,8 @@
 import '../styles/CarrouselItem.css'
 
-function CarrouselItem({ id, name, picture, price }) {
+function CarrouselItem({ id, name, picture, price, setDescriptionOpen }) {
   return (
-    <li key={id} className='carrousel__item'>
+    <li key={id} className='carrousel__item' onClick={() => setDescriptionOpen(true)}>
       <img className='carrousel__itemImg' src={picture} alt='' />
       <p className='carrousel__itemName'>{name}</p>
       <button>Ajouter au panier</button>

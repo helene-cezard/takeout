@@ -11,10 +11,9 @@
   height: 100vh;
 }
 
-.basket__title {
-  padding: 2rem;
-  font-size: 2rem;
-  text-align: center;
+.basket__openButton {
+  margin: 1rem;
+  padding: .5rem;
 }
 
 .basket__closeButton {
@@ -27,6 +26,12 @@
   background-color: #CE2B37;
   color: white;
   border: none;
+}
+
+.basket__title {
+  padding: 2rem;
+  font-size: 2rem;
+  text-align: center;
 }
 
 .basket__items, .basket__total {

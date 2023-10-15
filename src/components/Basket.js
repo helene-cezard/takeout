@@ -1,9 +1,12 @@
+import { useState } from 'react';
 import '../styles/Basket.css'
 
 function Basket() {
-  return (
-    <div className='basket hidden'>
-      <button className='basket__closeButton'>X</button>
+const [isOpen, setIsOpen] = useState(true);
+
+  return isOpen ? (
+    <div className='basket'>
+      <button className='basket__closeButton' onClick={() => setIsOpen(false)}>X</button>
       <h2 className='basket__title'>Panier</h2>
       <ul>
         <li className='basket__items'>Pizza margerita : <span className='basket__prices'>13€</span></li>
@@ -13,7 +16,9 @@ function Basket() {
       </ul>
       <button className='basket__orderButton'>Commander</button>
     </div>
-  );
+  ) : (
+    <button className='basket__openButton'  onClick={() => setIsOpen(true)}>Afficher le panier</button>
+  )
 
 }
 
