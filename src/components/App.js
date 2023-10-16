@@ -8,14 +8,26 @@ import { useState } from 'react';
 function App() {
   const [descriptionOpen, setDescriptionOpen] = useState(true)
   const [basket, updateBasket] = useState([]);
+  const [pizzaName, setPizzaName] = useState('pizza margherita');
 
   return (
     <div className="App">
       <Banner/>
       <div className='inner-layout'>
         <Basket basket={basket} updateBasket={updateBasket} />
-        <Carrousel setDescriptionOpen={setDescriptionOpen} basket={basket} updateBasket={updateBasket} />
-        <Description descriptionOpen={descriptionOpen} setDescriptionOpen={setDescriptionOpen}  />
+        <Carrousel
+        setDescriptionOpen={setDescriptionOpen}
+        basket={basket}
+        updateBasket={updateBasket}
+        pizzaName={pizzaName}
+        setPizzaName={setPizzaName}
+        />
+        <Description
+        descriptionOpen={descriptionOpen}
+        setDescriptionOpen={setDescriptionOpen}
+        pizzaName={pizzaName}
+        setPizzaName={setPizzaName}
+        />
       </div>
     </div>
   );

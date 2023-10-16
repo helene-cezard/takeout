@@ -3,7 +3,7 @@ import '../styles/CarrouselItem.css';
 import CarrouselItem from './CarrouselItem';
 import { pizze } from '../datas/pizze';
 
-function Carrousel({setDescriptionOpen, basket, updateBasket}) {
+function Carrousel({setDescriptionOpen, basket, updateBasket, pizzaName, setPizzaName}) {
 
   return (
     <ul className="carrousel">
@@ -16,6 +16,8 @@ function Carrousel({setDescriptionOpen, basket, updateBasket}) {
           setDescriptionOpen={setDescriptionOpen}
           basket={basket}
           updateBasket={updateBasket}
+          pizzaName={pizzaName}
+          setPizzaName={setPizzaName}
           />
         </div>
         )}
