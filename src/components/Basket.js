@@ -3,6 +3,10 @@ import '../styles/Basket.css'
 
 function Basket({basket, updateBasket}) {
 const [isOpen, setIsOpen] = useState(true);
+const total = basket.reduce(
+  (acc, pizzaType) => acc + pizzaType.amount * pizzaType.price,
+  0
+)
 
   return isOpen ? (
     <div className='basket'>
@@ -13,7 +17,7 @@ const [isOpen, setIsOpen] = useState(true);
         {basket.map(({name, price, amount}, index) => (
           <li key={`${name}-${index}`} className='basket__items'>{name} : <span className='basket__prices'>{price}€ x {amount}</span></li>
         ))}
-        <li className='basket__total'>Total : <span className='basket__prices'>38€</span></li>
+        <li className='basket__total'>Total : <span className='basket__prices'>{total}€</span></li>
       </ul>
       ) : (
         <p>Votre panier est vide</p>
