@@ -2,7 +2,7 @@ import { useState } from 'react';
 import '../styles/Basket.css'
 
 function Basket({basket, updateBasket}) {
-const [isOpen, setIsOpen] = useState(false);
+const [isOpen, setIsOpen] = useState(true);
 const total = basket.reduce(
   (acc, pizzaType) => acc + pizzaType.amount * pizzaType.price,
   0

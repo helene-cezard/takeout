@@ -9,9 +9,11 @@ function Description({ descriptionOpen, setDescriptionOpen, pizzaName, setPizzaN
     <div className='description'>
       <button className='description__close-button' onClick={() => setDescriptionOpen(false)}>X</button>
       <h2 className='description__title'>{item.name}</h2>
-      <img className='description__illustration' src={item.picture} alt={item.name}/>
+      <div className='description__image-price'>
+        <img className='description__illustration' src={item.picture} alt={item.name}/>
+        <p className='price-tag'>{item.price}€</p>
+      </div>
       <p className='description__text'>{item.description}</p>
-      <p>{item.price}€</p>
 
     </div>
   );

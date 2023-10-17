@@ -1,0 +1,20 @@
+.carousel__item {
+  padding: 5%;
+  margin: 2.5%;
+  border: solid 1px black;
+  border-radius: 4px;
+}
+
+.carousel__item-name {
+  text-align: center;
+  padding-bottom: 1.5rem;
+  font-size: 1.6rem;
+}
+
+.carousel__item-img {
+  width: 100%;
+}
+
+.carousel__image-price {
+  position: relative;
+}

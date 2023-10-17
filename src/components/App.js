@@ -1,6 +1,6 @@
 import Banner from './Banner';
 import Basket from './Basket';
-import Carrousel from './Carrousel';
+import Carousel from './Carousel';
 import Description from './Description';
 import '../styles/Layout.css'
 import { useState } from 'react';
@@ -15,7 +15,7 @@ function App() {
       <Banner/>
       <div className='inner-layout'>
         <Basket basket={basket} updateBasket={updateBasket} />
-        <Carrousel
+        <Carousel
         setDescriptionOpen={setDescriptionOpen}
         basket={basket}
         updateBasket={updateBasket}
