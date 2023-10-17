@@ -2,7 +2,7 @@ import { useState } from 'react';
 import '../styles/Basket.css'
 
 function Basket({basket, updateBasket}) {
-const [isOpen, setIsOpen] = useState(true);
+const [isOpen, setIsOpen] = useState(false);
 const total = basket.reduce(
   (acc, pizzaType) => acc + pizzaType.amount * pizzaType.price,
   0
@@ -10,7 +10,7 @@ const total = basket.reduce(
 
   return isOpen ? (
     <div className='basket'>
-      <button className='basket__closeButton' onClick={() => setIsOpen(false)}>X</button>
+      <button className='basket__close-button' onClick={() => setIsOpen(false)}>X</button>
       <h2 className='basket__title'>Panier</h2>
       {basket.length > 0 ? (
         <ul>
@@ -22,11 +22,11 @@ const total = basket.reduce(
       ) : (
         <p>Votre panier est vide</p>
       )}
-      <button className='basket__orderButton'>Commander</button>
+      <button className='basket__order-button'>Commander</button>
     </div>
   )
    : (
-    <button className='basket__openButton'  onClick={() => setIsOpen(true)}>Afficher le panier</button>
+    <button className='basket__open-button'  onClick={() => setIsOpen(true)}>Afficher le panier</button>
   )
 
 }

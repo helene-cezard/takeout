@@ -6,7 +6,7 @@ import '../styles/Layout.css'
 import { useState } from 'react';
 
 function App() {
-  const [descriptionOpen, setDescriptionOpen] = useState(true)
+  const [descriptionOpen, setDescriptionOpen] = useState(false)
   const [basket, updateBasket] = useState([]);
   const [pizzaName, setPizzaName] = useState('pizza margherita');
 

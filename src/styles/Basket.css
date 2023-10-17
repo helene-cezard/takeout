@@ -11,13 +11,13 @@
   height: 100%;
 }
 
-.basket__openButton {
+.basket__open-button {
   margin: 1rem;
   padding: .5rem;
   height: fit-content;
 }
 
-.basket__closeButton {
+.basket__close-button {
   position: absolute;
   top: 0;
   right: 0;

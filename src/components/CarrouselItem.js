@@ -24,8 +24,8 @@ function CarrouselItem({ name, picture, price, setDescriptionOpen, basket, updat
 
   return (
     <li className='carrousel__item' onClick={() => handleClickOnItem() }>
-      <img className='carrousel__itemImg' src={picture} alt='' />
-      <p className='carrousel__itemName'>{name}</p>
+      <img className='carrousel__item-img' src={picture} alt='' />
+      <p className='carrousel__item-name'>{name}</p>
       <button onClick={() => addToBasket(name, price)}>Ajouter au panier</button>
       <p>{price}€</p>
     </li>
