@@ -11,7 +11,6 @@ function App() {
   const [pizzaName, setPizzaName] = useState('pizza margherita');
   const [isOpen, setIsOpen] = useState(true);
 
-
   return (
     <div className="App">
       <Banner  isOpen={isOpen} setIsOpen={setIsOpen} />
