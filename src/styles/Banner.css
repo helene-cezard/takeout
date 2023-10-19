@@ -4,4 +4,21 @@
   text-align: center;
   font-size: 3rem;
   padding: 1rem;
+  display: flex;
+  justify-content: center;
+  position: relative;
+}
+
+.banner__basket-button {
+  position: absolute;
+  left: 4rem;
+  background-color: #009246;
+  color: white;
+  border: none;
+  font-size: 2.7rem;
+  transition: font-size .1s ease-in-out;
+}
+
+.banner__basket-button:hover {
+  font-size: 3rem;
 }

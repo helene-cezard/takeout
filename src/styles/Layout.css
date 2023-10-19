@@ -8,12 +8,24 @@
 
 .price-tag {
   position: absolute;
-  font-size: 2.5rem;
-  top: 1rem;
-  right: -1rem;
+  top: 8%;
+  right: -3%;
   background-color: #009246;
   color: white;
-  padding: 1rem
+  padding: 5%;
+  font-size: 1.2rem;
+}
+
+@media (min-width: 400px) {
+  .price-tag {
+    font-size: 1.5rem;
+  }
+}
+
+@media (min-width: 600px) {
+  .price-tag {
+    font-size: 2rem;
+  }
 }
 
 @media (min-width: 800px) {
@@ -21,5 +33,15 @@
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+  }
+
+  .price-tag {
+    font-size: 2.3rem;
+  }
+}
+
+@media (min-width: 1000px) {
+  .price-tag {
+    font-size: 2.5rem;
   }
 }

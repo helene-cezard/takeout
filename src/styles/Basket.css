@@ -4,11 +4,12 @@
   padding: 2.5rem;
 	display: flex;
 	flex-direction: column;
-	justify-content: flex-start;
+	/* justify-content: flex-start; */
   position: absolute;
   top: 0;
   z-index: 3;
   height: 100%;
+  width: 17rem;
 }
 
 .basket__open-button {
@@ -40,7 +41,7 @@
   display: flex;
   justify-content: space-between;
   width: 15rem;
-  padding: .2rem 1rem;
+  padding: .2rem 0;
 }
 
 .basket__total {
