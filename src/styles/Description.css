@@ -1,10 +1,15 @@
 .description {
   padding: 3rem;
-  border-left: solid black;
-  position: relative;
+  /* border-left: solid black; */
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
   background-color: white;
   z-index: 2;
   height: 100%;
+  /* width: 85%; */
+  /* width: 80vw; */
 }
 
 .description__close-button {
@@ -26,11 +31,25 @@
 }
 
 .description__illustration, .description__text {
-  width: 30rem;
+  width: 100%;
   margin-bottom: 2rem;
   text-align: justify;
 }
 
 .description__image-price {
   position: relative;
+}
+
+@media (min-width: 700px) {
+  .description {
+    left: unset;
+    width: 50%;
+    border-left: solid black;
+  }
+}
+
+@media (min-width: 1000px) {
+  .description {
+    width: 26%;
+  }
 }

@@ -9,12 +9,14 @@ function App() {
   const [descriptionOpen, setDescriptionOpen] = useState(false)
   const [basket, updateBasket] = useState([]);
   const [pizzaName, setPizzaName] = useState('pizza margherita');
+  const [isOpen, setIsOpen] = useState(true);
+
 
   return (
     <div className="App">
-      <Banner/>
+      <Banner  isOpen={isOpen} setIsOpen={setIsOpen} />
       <div className='inner-layout'>
-        <Basket basket={basket} updateBasket={updateBasket} />
+        <Basket basket={basket} updateBasket={updateBasket} isOpen={isOpen} setIsOpen={setIsOpen} />
         <Carousel
         setDescriptionOpen={setDescriptionOpen}
         basket={basket}

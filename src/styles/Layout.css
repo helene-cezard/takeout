@@ -1,7 +1,8 @@
 .inner-layout {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
+  display: block;
+  position: relative;
+  /* flex-direction: row;
+  justify-content: space-between; */
   height: 100vh;
 }
 
@@ -13,4 +14,12 @@
   background-color: #009246;
   color: white;
   padding: 1rem
+}
+
+@media (min-width: 800px) {
+  .inner-layout {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
 }
