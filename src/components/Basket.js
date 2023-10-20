@@ -10,11 +10,17 @@ function removeFromBasket(name) {
   updateBasket((basket) => basket.filter((pizza) => pizza.name !== name))
 }
 
-function updateAmount(name, price, value) {
-  console.log('Le nom de la pizza :', {name}, 'Le nombre de pizzas :', {value})
-  const basketFilteredCurrentPizza = basket.filter((pizza) => pizza.name !== name);
-
-  updateBasket([...basketFilteredCurrentPizza, {name, price, amount: value }])
+function updateAmount(name, value) {
+  const basketUpdatedCurrentPizza = basket.map(
+    (pizza) => {
+      if (pizza.name === name) {
+      pizza.amount = value;
+      return pizza;
+    }
+    return pizza;
+  }
+    );
+    updateBasket(basketUpdatedCurrentPizza);
 }
 
   return isOpen && (
@@ -23,13 +29,15 @@ function updateAmount(name, price, value) {
       <h2 className='basket__title'>Panier</h2>
       {basket.length > 0 ? (
         <ul>
-        {basket.map(({name, price, amount}, index) => (
+        {basket.map(({name, price, amount}, index) => 
+        amount > 0 &&
+        (
           <li key={`${name}-${index}`} className='basket__items'>
             {name} : 
             <span 
             className='basket__prices'>{price}€ x 
             <input className='basket__amount' type='number' value={`${amount}`} 
-            onChange={(event) => updateAmount(name, price, event.target.value)}
+            onChange={(event) => updateAmount(name, event.target.value)}
             />
             </span>
              <button onClick={() => removeFromBasket(name)}>X</button>

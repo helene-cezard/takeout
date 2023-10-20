@@ -5,13 +5,16 @@ function CarouselItem({ name, picture, price, setDescriptionOpen, basket, update
   function addToBasket(name, price) {
 		const currentPizzaSaved = basket.find((pizza) => pizza.name === name)
 		if (currentPizzaSaved) {
-			const basketFilteredCurrentPizza = basket.filter(
-				(pizza) => pizza.name !== name
-			);
-			updateBasket([
-				...basketFilteredCurrentPizza,
-				{ name, price, amount: currentPizzaSaved.amount + 1 }
-			]);
+			const basketUpdatedCurrentPizza = basket.map(
+				(pizza) => {
+					if (pizza.name === name) {
+					pizza.amount +=1;
+					return pizza;
+				}
+				return pizza;
+			}
+				);
+				updateBasket(basketUpdatedCurrentPizza);
 		} else {
 			updateBasket([...basket, { name, price, amount: 1 }]);
 		}
