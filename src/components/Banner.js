@@ -8,8 +8,8 @@ function Banner({isOpen, setIsOpen}) {
   const element = <FontAwesomeIcon icon={faBasketShopping} />
   return (
   <header className="banner">
-    <button className='banner__basket-button' onClick={() => setIsOpen(!isOpen)}>{element}</button>
     <h1>Viva Italia</h1>
+    <button className='banner__basket-button' onClick={() => setIsOpen(!isOpen)}>{element}</button>
   </header>
   );
 }
