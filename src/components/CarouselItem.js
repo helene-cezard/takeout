@@ -32,7 +32,7 @@ function CarouselItem({ name, picture, price, setDescriptionOpen, basket, update
 				<img className='carousel__item-img' src={picture} alt='' />
 				<p className='price-tag'>{price}€</p>
 			</div>
-      <button onClick={() => addToBasket(name, price)}>Ajouter au panier</button>
+      <button className='carousel__add-to-basket-button' onClick={() => addToBasket(name, price)}>Ajouter au panier</button>
     </li>
   );
 }
