@@ -1,6 +1,5 @@
 .description {
   padding: 3rem;
-  /* border-left: solid black; */
   position: absolute;
   top: 0;
   right: 0;
@@ -8,8 +7,6 @@
   background-color: white;
   z-index: 2;
   height: 100%;
-  /* width: 85%; */
-  /* width: 80vw; */
 }
 
 .description__close-button {

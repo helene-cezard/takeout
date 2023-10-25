@@ -16,12 +16,7 @@
   color: white;
   border: none;
   font-size: 2.7rem;
-  transition: font-size .1s ease-in-out;
   margin: 1rem 0;
-}
-
-.banner__basket-button:hover {
-  font-size: 3rem;
 }
 
 @media (min-width: 600px) {

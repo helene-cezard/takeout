@@ -2,14 +2,20 @@
   background-color: #CE2B37;
   color: white;
   padding: 2.5rem;
-	display: flex;
-	flex-direction: column;
   position: absolute;
   top: 0;
   z-index: 3;
   height: 100%;
-  width: 17rem;
-  box-sizing: content-box;
+  width: 100%;
+  box-sizing: border-box;
+  text-align: center;
+}
+
+.basket__content {
+  display: flex;
+	flex-direction: column;
+  width: fit-content;
+  margin: auto;
 }
 
 .basket__open-button {
@@ -55,9 +61,8 @@
 }
 
 .basket__empty-button {
-  width: 50%;
   align-self: flex-end;
-  padding: .3rem;
+  padding: .3rem 1rem;
   margin: 1rem 0;
   border: none;
   background-color: white;
@@ -79,4 +84,10 @@
 
 .basket__order-button:active {
   box-shadow: inset .2rem .1rem 1.3rem grey;
+}
+
+@media (min-width: 900px) {
+  .basket {
+      width: max-content;
+  }
 }
