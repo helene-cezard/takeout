@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/takeout/static/css/main.2b1a9ae6.css",
-    "main.js": "/takeout/static/js/main.a6b02f74.js",
+    "main.css": "/takeout/static/css/main.33a70c8f.css",
+    "main.js": "/takeout/static/js/main.b1fcf3f4.js",
     "index.html": "/takeout/index.html",
-    "main.2b1a9ae6.css.map": "/takeout/static/css/main.2b1a9ae6.css.map",
-    "main.a6b02f74.js.map": "/takeout/static/js/main.a6b02f74.js.map"
+    "main.33a70c8f.css.map": "/takeout/static/css/main.33a70c8f.css.map",
+    "main.b1fcf3f4.js.map": "/takeout/static/js/main.b1fcf3f4.js.map"
   },
   "entrypoints": [
-    "static/css/main.2b1a9ae6.css",
-    "static/js/main.a6b02f74.js"
+    "static/css/main.33a70c8f.css",
+    "static/js/main.b1fcf3f4.js"
   ]
 }
