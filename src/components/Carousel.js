@@ -4,7 +4,7 @@ import CarouselItem from './CarouselItem';
 import { pizze } from '../datas/pizze';
 import { useState } from 'react';
 
-function Carousel({setDescriptionOpen, basket, updateBasket, pizzaName, setPizzaName}) {
+function Carousel({setDescriptionOpen, basket, updateBasket, setPizzaName, isOpen, setIsOpen}) {
 
   const [carouselImage, setCarouselImage] = useState('carousel--first-picture');
   const imgNumber =['first', 'second', 'third', 'fourth'];
@@ -42,8 +42,9 @@ function Carousel({setDescriptionOpen, basket, updateBasket, pizzaName, setPizza
             setDescriptionOpen={setDescriptionOpen}
             basket={basket}
             updateBasket={updateBasket}
-            pizzaName={pizzaName}
             setPizzaName={setPizzaName}
+            isOpen={isOpen}
+            setIsOpen={setIsOpen}
             />
           </div>
           )}

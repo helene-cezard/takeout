@@ -20,8 +20,9 @@ function App() {
         setDescriptionOpen={setDescriptionOpen}
         basket={basket}
         updateBasket={updateBasket}
-        pizzaName={pizzaName}
         setPizzaName={setPizzaName}
+        isOpen={isOpen}
+        setIsOpen={setIsOpen}
         />
         <Description
         descriptionOpen={descriptionOpen}

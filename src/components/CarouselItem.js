@@ -1,6 +1,6 @@
 import '../styles/CarouselItem.css'
 
-function CarouselItem({ name, picture, price, setDescriptionOpen, basket, updateBasket, pizzaName, setPizzaName }) {
+function CarouselItem({ name, picture, price, setDescriptionOpen, basket, updateBasket, setPizzaName, isOpen, setIsOpen }) {
 
   function addToBasket(name, price) {
 		const currentPizzaSaved = basket.find((pizza) => pizza.name === name)
@@ -32,7 +32,7 @@ function CarouselItem({ name, picture, price, setDescriptionOpen, basket, update
 				<img className='carousel__item-img' src={picture} alt='' />
 				<p className='price-tag'>{price}€</p>
 			</div>
-      <button className='carousel__add-to-basket-button' onClick={() => addToBasket(name, price)}>Ajouter au panier</button>
+      <button className='carousel__add-to-basket-button' onClick={() => {addToBasket(name, price); setIsOpen(true)}}>Ajouter au panier</button>
     </li>
   );
 }
