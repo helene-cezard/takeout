@@ -2,6 +2,7 @@
   "name": "takeout",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://helene-cezard.github.io/takeout",
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^6.4.2",
     "@fortawesome/free-solid-svg-icons": "^6.4.2",
@@ -19,9 +20,8 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "predeploy" : "npm run build",
-    "deploy" : "gh-pages -d build",
-
+    "predeploy": "yarn run build",
+    "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
     "extends": [
@@ -43,7 +43,5 @@
   },
   "devDependencies": {
     "gh-pages": "^6.0.0"
-  },
-  "homepage": "http://{helene-cezard}.github.io/{takeout}"
-
+  }
 }
