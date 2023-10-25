@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/takeout/static/css/main.2b1a9ae6.css",
+    "main.js": "/takeout/static/js/main.a6b02f74.js",
+    "index.html": "/takeout/index.html",
+    "main.2b1a9ae6.css.map": "/takeout/static/css/main.2b1a9ae6.css.map",
+    "main.a6b02f74.js.map": "/takeout/static/js/main.a6b02f74.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.2b1a9ae6.css",
+    "static/js/main.a6b02f74.js"
+  ]
+}
