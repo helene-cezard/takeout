@@ -1,5 +1,5 @@
 import '../styles/Description.css'
-import { pizze } from '../datas/pizze.js'
+import { pizze } from '../datas/pizze'
 
 function Description({ descriptionOpen, setDescriptionOpen, pizzaName, setPizzaName }) {
 
@@ -14,6 +14,7 @@ function Description({ descriptionOpen, setDescriptionOpen, pizzaName, setPizzaN
         <p className='price-tag'>{item.price}€</p>
       </div>
       <p className='description__text'>{item.description}</p>
+      <button>Ajouter au panier</button>
 
     </div>
   );

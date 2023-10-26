@@ -1,6 +1,7 @@
 import '../styles/CarouselItem.css'
+import { useEffect } from 'react';
 
-function CarouselItem({ name, picture, price, setDescriptionOpen, basket, updateBasket, setPizzaName, isOpen, setIsOpen }) {
+function CarouselItem({ name, picture, price, setDescriptionOpen, basket, updateBasket, setPizzaName, setIsOpen }) {
 
   function addToBasket(name, price) {
 		const currentPizzaSaved = basket.find((pizza) => pizza.name === name)

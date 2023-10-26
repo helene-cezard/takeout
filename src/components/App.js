@@ -3,13 +3,22 @@ import Basket from './Basket';
 import Carousel from './Carousel';
 import Description from './Description';
 import '../styles/Layout.css'
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 
 function App() {
   const [descriptionOpen, setDescriptionOpen] = useState(false)
-  const [basket, updateBasket] = useState([]);
+
+  const savedBasket = localStorage.getItem('basket');
+  const [basket, updateBasket] = useState(savedBasket ? JSON.parse(savedBasket) : []);
   const [pizzaName, setPizzaName] = useState('pizza margherita');
   const [isOpen, setIsOpen] = useState(true);
+
+  useEffect(() => {
+    const stringifiedBasket = JSON.stringify(basket);
+    localStorage.setItem('basket', stringifiedBasket);
+  }, [basket]);
+
+  
 
   return (
     <div className="App">
@@ -21,7 +30,6 @@ function App() {
         basket={basket}
         updateBasket={updateBasket}
         setPizzaName={setPizzaName}
-        isOpen={isOpen}
         setIsOpen={setIsOpen}
         />
         <Description

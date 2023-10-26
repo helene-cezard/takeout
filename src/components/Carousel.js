@@ -4,7 +4,7 @@ import CarouselItem from './CarouselItem';
 import { pizze } from '../datas/pizze';
 import { useState } from 'react';
 
-function Carousel({setDescriptionOpen, basket, updateBasket, setPizzaName, isOpen, setIsOpen}) {
+function Carousel({setDescriptionOpen, basket, updateBasket, setPizzaName, setIsOpen}) {
 
   const [carouselImage, setCarouselImage] = useState('carousel--first-picture');
   const imgNumber =['first', 'second', 'third', 'fourth'];
@@ -25,9 +25,6 @@ function Carousel({setDescriptionOpen, basket, updateBasket, setPizzaName, isOpe
     if (!event.target.classList.contains('carousel__slide-button--active') && event.target.value === 'fourth') {
       setCarouselImage('carousel--fourth-picture');
     }
-
-    // event.target.classList.toggle('carousel__slide-button--active');
-    // console.log(event.target.parent)
   }
 
   return (
@@ -43,7 +40,6 @@ function Carousel({setDescriptionOpen, basket, updateBasket, setPizzaName, isOpe
             basket={basket}
             updateBasket={updateBasket}
             setPizzaName={setPizzaName}
-            isOpen={isOpen}
             setIsOpen={setIsOpen}
             />
           </div>
