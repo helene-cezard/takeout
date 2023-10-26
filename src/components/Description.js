@@ -1,7 +1,7 @@
 import '../styles/Description.css'
 import { pizze } from '../datas/pizze'
 
-function Description({ descriptionOpen, setDescriptionOpen, pizzaName, setPizzaName }) {
+function Description({ descriptionOpen, setDescriptionOpen, pizzaName, addToBasket, setIsOpen }) {
 
   const item = pizze.find((pizza) => pizza.name === pizzaName);
 
@@ -14,7 +14,7 @@ function Description({ descriptionOpen, setDescriptionOpen, pizzaName, setPizzaN
         <p className='price-tag'>{item.price}€</p>
       </div>
       <p className='description__text'>{item.description}</p>
-      <button>Ajouter au panier</button>
+      <button className='add-to-basket-button' onClick={() => {addToBasket(item.name, item.price); setIsOpen(true)}}>Ajouter au panier</button>
 
     </div>
   );

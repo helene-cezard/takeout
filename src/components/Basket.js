@@ -24,6 +24,10 @@ function updateAmount(name, value) {
     updateBasket(basketUpdatedCurrentPizza);
 }
 
+function orderAlert() {
+  alert('Vous ne pouvez pas commander chez nous ! Ce site est un execrice. Nous vous invitons à commander vos pizzas auprès d\'une vrai pizzeria.')
+}
+
 
   return isOpen && (
     <div className='basket'>
@@ -53,7 +57,7 @@ function updateAmount(name, value) {
       ) : (
         <p>Votre panier est vide</p>
       )}
-      <button className='basket__order-button'>Commander</button>
+      <button className='basket__order-button' onClick={() => orderAlert()}>Commander</button>
     </div>
   )
 

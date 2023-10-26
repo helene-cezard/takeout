@@ -2,7 +2,8 @@ import Banner from './Banner';
 import Basket from './Basket';
 import Carousel from './Carousel';
 import Description from './Description';
-import '../styles/Layout.css'
+import '../styles/Layout.css';
+import '../styles/App.css';
 import { useEffect, useState } from 'react';
 
 function App() {
@@ -18,7 +19,23 @@ function App() {
     localStorage.setItem('basket', stringifiedBasket);
   }, [basket]);
 
-  
+  function addToBasket(name, price) {
+		const currentPizzaSaved = basket.find((pizza) => pizza.name === name)
+		if (currentPizzaSaved) {
+			const basketUpdatedCurrentPizza = basket.map(
+				(pizza) => {
+					if (pizza.name === name) {
+					pizza.amount +=1;
+					return pizza;
+				}
+				return pizza;
+			}
+				);
+				updateBasket(basketUpdatedCurrentPizza);
+		} else {
+			updateBasket([...basket, { name, price, amount: 1 }]);
+		}
+	}
 
   return (
     <div className="App">
@@ -31,12 +48,15 @@ function App() {
         updateBasket={updateBasket}
         setPizzaName={setPizzaName}
         setIsOpen={setIsOpen}
+        addToBasket={addToBasket}
         />
         <Description
         descriptionOpen={descriptionOpen}
         setDescriptionOpen={setDescriptionOpen}
         pizzaName={pizzaName}
         setPizzaName={setPizzaName}
+        addToBasket={addToBasket}
+        setIsOpen={setIsOpen}
         />
       </div>
     </div>
